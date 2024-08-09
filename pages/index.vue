@@ -1,11 +1,5 @@
 <template>
-    <div>
-        <TheAlert />
+    <div class="MainPage">
+        <TheAlert>Alert from Home</TheAlert>
     </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
-
-<style scoped></style>

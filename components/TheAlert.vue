@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <div class="Alert bg-green-400 rounded px-2 py-1 text-white mb-2 w-6/12 h-3/6">
-            Alert from home page
+    <div class="flex justify-center mt-10">
+        <div class="Alert bg-indigo-500 rounded px-2 py-1 text-white w-6/12 h-3/6 text-center">
+            <slot />
         </div>
     </div>
 </template>
