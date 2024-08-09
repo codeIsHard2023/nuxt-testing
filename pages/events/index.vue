@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- <AlertEventsIncomming /> -->
         <TheAlert>Alert from Events</TheAlert>
     </div>
 </template>
