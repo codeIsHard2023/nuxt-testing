@@ -15,7 +15,7 @@
                 <NuxtLink to="/content-module" class="p-4 hover:underline">Content</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/state-management" class="p-4 hover:underline">useState</NuxtLink>
+                <NuxtLink to="/state-management" class="p-4 hover:underline">useState / Pinia</NuxtLink>
             </li>
         </ul>
     </header>

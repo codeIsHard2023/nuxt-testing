@@ -14,14 +14,26 @@
         <NuxtLink to="https://www.vuemastery.com/blog/nuxt-3-state-mangement-pinia-vs-usestate/ " class="underline">here
         </NuxtLink>
     </p>
+    <div class="mt-5 flex gap-2 justify-center">
+        <div class="flex flex-col gap-2 ">
+            <span>Counter from pinia store</span>
+            <span> Count : {{ store.count }}</span>
+            <span>Double count : {{ store.doubleCount }}</span>
+        </div>
+        <button @click="store.increment" class="w-15 px-2 rounded bg-slate-400 hover:bg-slate-600"> increment </button>
+    </div>
 </template>
 
 <script setup lang="ts">
+import { useCounterStore } from '~/stores/testStore';
+
 definePageMeta({
     middleware: "auth",
     layout: "custom"
 })
-// create random value
+
+const store = useCounterStore()
+console.log(store)
 // const count = useState('counter', () => Math.round(Math.random() * 100))
 
 //default value shared everywhere in my app  
