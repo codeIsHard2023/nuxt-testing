@@ -9,12 +9,16 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+definePageMeta({
+    middleware: 'auth'
+})
+
 const { saySomething } = useUtils()
 const phrase = ref("your component is ")
 const status = ref("")
-const imageContainer = ref(null)
-const imageContainerWidth = ref(0)
+const imageContainer = ref<HTMLDivElement>()
+const imageContainerWidth = ref<number>()
 
 const { $sayHello } = useNuxtApp()
 
@@ -26,8 +30,8 @@ onBeforeMount(() => {
 onMounted(() => {
     status.value = "mounted"
     saySomething(phrase.value, status.value)
-    imageContainerWidth.value = imageContainer.value.clientWidth
-    console.log(imageContainer.value.clientWidth)
+    imageContainerWidth.value = imageContainer.value!.clientWidth
+    console.log(imageContainer.value!.clientWidth)
 })
 
 </script>
