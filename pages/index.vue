@@ -6,10 +6,14 @@
 
             <img src="@/assets/images/image-2.jpg" alt="cofeeshop exterior" class="h-5/6 rounded-md">
         </div>
+        <div class="flex justify-center text-xl">
+            <ContentDoc class="text-center" />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
+
 definePageMeta({
     middleware: 'auth'
 })
