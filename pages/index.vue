@@ -15,6 +15,9 @@ const phrase = ref("your component is ")
 const status = ref("")
 const imageContainer = ref(null)
 const imageContainerWidth = ref(0)
+
+const { $sayHello } = useNuxtApp()
+
 onBeforeMount(() => {
     status.value = "ready"
     saySomething(phrase.value, status.value)
